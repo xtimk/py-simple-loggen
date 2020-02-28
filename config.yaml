@@ -1,0 +1,20 @@
+## Configuration
+
+# Log file output
+outfile: 'tests/outfile.txt'
+
+# list of lines to choose from
+# loggen will write these line chosen casually
+template_lines: ["p1", "p2", "p3", "p4"]
+
+# how many lines to write each time
+no_bulk_lines: 10
+
+# how many seconds to wait beetwen writes
+sleep_time: 1
+
+# total lines to write in outfile
+no_total_lines: 15
+
+# add number of line as a prefix for each line
+prefix_no_lines: True
