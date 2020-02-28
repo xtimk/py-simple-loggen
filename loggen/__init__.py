@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+
+__author__ = "Tiziano Mele"
+__license__ = "MIT"
+__version__ = "0.8"
+__maintainer__ = "Tiziano Mele"
+__email__ = "onaizitelem@gmail.com"
+__status__ = "Development"
+
 from threading import Thread
 from file_writer import File_writer
 import time
