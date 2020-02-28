@@ -6,7 +6,7 @@ class Loggen(Thread):
 	filepath = ""
 	source_lines = []
 
-	def __init__(self, thread_name, filepath, source_lines, no_bulk_lines, sleep_time, no_total_lines):
+	def __init__(self, thread_name, filepath, source_lines, no_bulk_lines, sleep_time, no_total_lines, prefix_no_lines):
 		Thread.__init__(self)
 		self.name = thread_name
 		self.filepath = filepath
@@ -14,8 +14,9 @@ class Loggen(Thread):
 		self.no_bulk_lines = no_bulk_lines
 		self.sleep_time = sleep_time
 		self.no_total_lines = no_total_lines
+		self.prefix_no_lines = prefix_no_lines
 
-		self.fw = File_writer(self.filepath, self.source_lines)
+		self.fw = File_writer(self.filepath, self.source_lines, self.prefix_no_lines)
 
 
 	def run(self):

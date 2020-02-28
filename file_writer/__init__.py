@@ -4,10 +4,12 @@ class File_writer:
 	filepath = ""
 	source_lines = []
 
-	def __init__(self, filepath, source_lines):
+	def __init__(self, filepath, source_lines, prefix_no_line):
 		self.filepath = filepath
 		self.source_lines = source_lines
+		self.prefix_no_line = prefix_no_line
 
+		self.total_written_lines = 0
 		filehandle = open(self.filepath,"w")
 		filehandle.close()
 
@@ -20,7 +22,13 @@ class File_writer:
 			filehandle = open(self.filepath,"a+")
 			for i in range(number_of_lines):
 				line = self.get_rand_line()
-				filehandle.write(line)
+				if self.prefix_no_line:
+					filehandle.write(str(self.total_written_lines + 1) + " " + line)
+				else:
+					filehandle.write(line)
+
+				self.total_written_lines += 1
+
 			filehandle.close()
 		except Exception as e:
 			print(e)
@@ -31,8 +39,13 @@ class File_writer:
 		try:
 			line = self.get_rand_line()
 			filehandle = open(self.filepath,"a+")
-			filehandle.write(line)
+			if self.prefix_no_line:
+				filehandle.write(str(self.total_written_lines + 1) + " " + line)
+			else:
+				filehandle.write(line)
+			
 			filehandle.close()
+			self.total_written_lines += 1
 		except Exception as e:
 			print(e)
 			exit(99)
