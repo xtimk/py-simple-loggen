@@ -5,7 +5,7 @@ outfile: 'tests/outfile.txt'
 
 # list of lines to choose from
 # loggen will write these line chosen casually
-template_lines: ["p1", "p2", "p3", "p4"]
+template_lines: ["example line 1", "example line 2", "example line 3", "example line 4"]
 
 # how many lines to write each time
 no_bulk_lines: 10
