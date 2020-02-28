@@ -10,9 +10,9 @@ __status__ = "Development"
 import yaml
 
 class ConfReader:
-"""
-Class used to store config informations
-"""
+	"""
+	Class used to store config informations
+	"""
 
 	def __init__(self, filepath):
 		## Now reading from config file
