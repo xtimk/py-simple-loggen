@@ -4,6 +4,14 @@ import os
 
 class basic_filewriter_unittest(unittest.TestCase):
 
+	def get_file_no_lines(self, filepath):
+		no_lines = 0
+		with open(filepath, 'r') as f:
+			for line in f:
+				no_lines += 1
+
+		return no_lines
+
 	def test_constructor(self):
 		## input data
 		filepath = os.getcwd() + "/tests/logtest.txt"
@@ -37,10 +45,7 @@ class basic_filewriter_unittest(unittest.TestCase):
 		logger = File_writer(filepath, lines, prefix_no_lines)
 		logger.append_bulk(bulk_size)
 
-		result = 0
-		with open(filepath, 'r') as f:
-			for line in f:
-				result += 1
+		result = self.get_file_no_lines(filepath)
 
 		self.assertEqual(result, bulk_size)
 
@@ -54,10 +59,7 @@ class basic_filewriter_unittest(unittest.TestCase):
 		logger = File_writer(filepath, lines, prefix_no_lines)
 		logger.append_single_line()
 
-		result = 0
-		with open(filepath, 'r') as f:
-			for line in f:
-				result += 1
+		result = self.get_file_no_lines(filepath)
 
 		self.assertEqual(result, 1)
 
