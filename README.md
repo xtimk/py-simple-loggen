@@ -13,7 +13,7 @@ outfile: 'tests/outfile.txt'
 ```
 Specify a list of possibile lines that will be chosen casually and written in the log file
 ```
-template_lines: ["p1", "p2", "p3", "p4"]
+template_lines: ["example line 1", "example line 2", "example line 3"]
 ```
 How many lines do you want to write at one time. If you want to increase write speed increase this number
 ```
