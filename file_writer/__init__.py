@@ -23,9 +23,9 @@ class File_writer:
 			for i in range(number_of_lines):
 				line = self.get_rand_line()
 				if self.prefix_no_line:
-					filehandle.write(str(self.total_written_lines + 1) + " " + line)
+					filehandle.write(str(self.total_written_lines + 1) + " " + line + "\n")
 				else:
-					filehandle.write(line)
+					filehandle.write(line + "\n")
 
 				self.total_written_lines += 1
 
@@ -40,9 +40,9 @@ class File_writer:
 			line = self.get_rand_line()
 			filehandle = open(self.filepath,"a+")
 			if self.prefix_no_line:
-				filehandle.write(str(self.total_written_lines + 1) + " " + line)
+				filehandle.write(str(self.total_written_lines + 1) + " " + line + "\n")
 			else:
-				filehandle.write(line)
+				filehandle.write(line + "\n")
 			
 			filehandle.close()
 			self.total_written_lines += 1
