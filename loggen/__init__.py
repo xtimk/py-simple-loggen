@@ -20,7 +20,7 @@ class Loggen(Thread):
 
 
 	def run(self):
-		print("Thread <" + self.name + "> started.")
+		# print("Thread <" + self.name + "> started.")
 		total_written_lines = 0
 		while total_written_lines < self.no_total_lines:
 			if (self.no_total_lines - total_written_lines >= self.no_bulk_lines):
@@ -31,7 +31,7 @@ class Loggen(Thread):
 				self.fw.append_bulk(self.no_total_lines - total_written_lines)
 				total_written_lines += self.no_total_lines - total_written_lines
 				time.sleep(self.sleep_time)
-		print("Thread <" + self.name + "> ended.")
-		print("Total written lines: " + str(total_written_lines))
-		print("Expected written lines: " + str(self.no_total_lines))
+		# print("Thread <" + self.name + "> ended.")
+		# print("Total written lines: " + str(total_written_lines))
+		# print("Expected written lines: " + str(self.no_total_lines))
 
