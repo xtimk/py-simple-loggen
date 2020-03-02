@@ -1,20 +1,24 @@
 ## Configuration
 
 # Log file output
+# Tool will create the file if does not exists.
 outfile: 'tests/outfile.txt'
 
-# list of lines to choose from
-# loggen will write these line chosen casually
+# Clean any data in the output file before starting generating new logs
+clear_existing_file_data: True
+
+# List of lines to choose from
+# Loggen will write these line chosen casually
 template_lines: ["example line 1", "example line 2", "example line 3", "example line 4"]
 
-# how many lines to write each time
+# How many lines to write each time
 no_bulk_lines: 10
 
-# how many seconds to wait beetwen writes
+# How many seconds to wait beetwen writes
 sleep_time: 1
 
-# total lines to write in outfile
+# Total lines to write in outfile
 no_total_lines: 15
 
-# add number of line as a prefix for each line
+# Add number of line as a prefix for each line
 prefix_no_lines: True

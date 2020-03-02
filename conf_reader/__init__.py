@@ -32,6 +32,9 @@ class ConfReader:
 	def get_outfile(self):
 		return self.config['outfile']
 
+	def get_clear_existing_file_data(self):
+		return self.config['clear_existing_file_data']
+
 	def get_template_lines(self):
 		return self.config['template_lines']
 

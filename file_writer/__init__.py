@@ -13,14 +13,20 @@ class File_writer:
 	filepath = ""
 	source_lines = []
 
-	def __init__(self, filepath, source_lines, prefix_no_line):
+	def __init__(self, filepath, clear_existing_file_data, source_lines, prefix_no_line):
 		self.filepath = filepath
 		self.source_lines = source_lines
 		self.prefix_no_line = prefix_no_line
-
 		self.total_written_lines = 0
-		filehandle = open(self.filepath,"w")
-		filehandle.close()
+
+		if clear_existing_file_data:
+			# Cleans existing file, or creates it if does not exists
+			filehandle = open(self.filepath,"w")
+			filehandle.close()
+		else:
+			# Do nothing if file already exists, or creates it if does not exists
+			filehandle = open(self.filepath,"a+")
+			filehandle.close()
 
 	def get_rand_line(self):
 		rand_index = random.randrange(len(self.source_lines))
