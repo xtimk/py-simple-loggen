@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/xtimk/py-simple-loggen.svg?branch=master)](https://travis-ci.com/xtimk/py-simple-loggen) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]([https://github.com/xtimk/py-simple-loggen/blob/master/LICENSE](https://github.com/xtimk/py-simple-loggen/blob/master/LICENSE)) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Python 3.7.1](https://img.shields.io/badge/python-3.7.1-blue.svg)](https://www.python.org/downloads/release/python-371/)
+[![Build Status](https://travis-ci.com/xtimk/py-simple-loggen.svg?branch=master)](https://travis-ci.com/xtimk/py-simple-loggen) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/xtimk/py-simple-loggen/blob/master/LICENSE) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![Python 3.7.1](https://img.shields.io/badge/python-3.7.1-blue.svg)](https://www.python.org/downloads/release/python-371/)
 
   
 
